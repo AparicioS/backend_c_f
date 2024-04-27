@@ -24,6 +24,6 @@ app.post('/upload', upload.single('image'), (req, res) => {
 });
 
 // Iniciar o servidor
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
